@@ -1,0 +1,177 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  /* background: linear-gradient(135deg, #6dd5ed, #2193b0); */
+background-image: url('./assets/second.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #2193b0;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+.progress-container {
+  background: #f0f0f0;
+  border-radius: 5px;
+  margin: 10px 0;
+  height: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#progress-bar {
+  background: #4caf50;
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease-in-out;
+}
+
+
+#todo-input {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#add-btn {
+  padding: 10px 15px;
+  background-color: #2193b0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#add-btn:hover {
+  background-color: #176f8a;
+}
+
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+#todo-list li {
+  padding: 10px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-list li input[type="checkbox"] {
+  margin-right: 50px;
+}
+
+#todo-list li .delete-btn {
+  background: none;
+  border: none;
+  color: #f44336;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.congrats-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4caf50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+  }
+  
+  .congrats-modal h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  .congrats-modal p {
+    margin-top: 10px;
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+  
+ 
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
